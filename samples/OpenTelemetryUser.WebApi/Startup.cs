@@ -31,7 +31,7 @@ namespace OpenTelemetryUser.WebApi
         public IServiceProvider ConfigureServices(IServiceCollection services)
         {
             services
-                .AddOpenTelemetryTracing(typeof(Startup).Namespace, _environment.IsDevelopment())
+                .AddOpenTelemetryTracing(typeof(Startup).Namespace, isDevelopment:_environment.IsDevelopment())
                 .AddOpenTelemetryMetrics(true)
                 .ConfigureDefaultForApi<Startup>(new StartupConfigureOptions
                 {
