@@ -1,12 +1,12 @@
 {
-  "name": "basisregisters-dependencyinjection",
+  "name": "basisregisters-opentelemetry",
   "version": "1.0.2",
-  "description": "A library to facilitate usage of Microsoft.Extensions.DependencyInjection in base registries.",
+  "description": "A library to facilitate usage of OpenTelemetry in base registries.",
   "author": "Basisregisters Vlaanderen",
   "license": "EUPL-1.2",
   "repository": {
     "type": "git",
-    "url": "git@github.com:informatievlaanderen/basisregisters-dependencyinjection.git"
+    "url": "git@github.com:informatievlaanderen/basisregisters-opentelemetry.git"
   },
   "dependencies": {},
   "devDependencies": {

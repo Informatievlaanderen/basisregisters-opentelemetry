@@ -4,24 +4,24 @@ updates:
 - package-ecosystem: nuget
   directory: "/"
   schedule:
-    interval: daily
+    interval: weekly
   open-pull-requests-limit: 25
   rebase-strategy: "disabled"
   
 - package-ecosystem: github-actions
   directory: "/"
   schedule:
-    interval: daily
+    interval: weekly
   rebase-strategy: "disabled"
 
 - package-ecosystem: npm
   directory: "/"
   schedule:
-    interval: daily
+    interval: weekly
   rebase-strategy: "disabled"
 
 - package-ecosystem: docker
   directory: "/src/TicketingService"
   schedule:
-    interval: daily
+    interval: weekly
   rebase-strategy: "disabled"
