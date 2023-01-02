@@ -11,7 +11,7 @@ namespace Be.Vlaanderen.Basisregisters.OpenTelemetry.Tests
         public void AddOpenTelemetryTracing()
         {
             var services = new ServiceCollection();
-            services.AddOpenTelemetryTracing(nameof(OpenTelemetryTests), true);
+            services.AddOpenTelemetryTracing(nameof(OpenTelemetryTests), isDevelopment:true);
 
             Assert.Contains(services, x => x.ServiceType == typeof(TracerProvider));
         }

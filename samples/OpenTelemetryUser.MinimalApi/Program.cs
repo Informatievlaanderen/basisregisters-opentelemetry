@@ -2,6 +2,7 @@ using System;
 using Be.Vlaanderen.Basisregisters.OpenTelemetry;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 
 namespace OpenTelemetryUser.MinimalApi
@@ -23,13 +24,15 @@ namespace OpenTelemetryUser.MinimalApi
                 .AddCommandLine(args);
 
             builder
-                .AddOpenTelemetryTracing(typeof(Program).Namespace, builder.Environment.IsDevelopment())
+                .AddOpenTelemetryTracing(typeof(Program).Namespace, displayName => displayName.StartsWith("/health") || displayName.StartsWith("/metrics"), isDevelopment:builder.Environment.IsDevelopment())
                 .AddOpenTelemetryMetrics(true)
-                .AddOpenTelemetryLogging(typeof(Program).Namespace);
+                .AddOpenTelemetryLogging(typeof(Program).Namespace)
+                .Services.AddHealthChecks();
 
             var app = builder.Build();
 
             app.MapGet("/", () => "Hello");
+            app.MapHealthChecks("/health");
 
             app.UseOpenTelemetryPrometheusScrapingEndpoint();
 
