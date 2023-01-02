@@ -107,7 +107,7 @@ jobs:
       run: |
         node packages/Be.Vlaanderen.Basisregisters.Build.Pipeline/Content/ci-nuget.js dist/$LIBNAME/$LIBNAME.$SEMVER.nupkg
       env:
-        LIBNAME: Be.Vlaanderen.Basisregisters.OpenTel
+        LIBNAME: Be.Vlaanderen.Basisregisters.OpenTelemetry
         SEMVER: ${{ env.RELEASE_VERSION }}
         NUGET_HOST: ${{ secrets.NUGET_HOST }}
         NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
