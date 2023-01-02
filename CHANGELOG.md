@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/informatievlaanderen/basisregisters-opentelemetry/compare/v1.0.0...v1.0.1) (2023-01-02)
+
+
+### Bug Fixes
+
+* add custom processors, meters & views ([7a569f3](https://github.com/informatievlaanderen/basisregisters-opentelemetry/commit/7a569f35f966aa632aa0439c98a79c9319cdba88))
+
 # 1.0.0 (2023-01-02)
 
 
