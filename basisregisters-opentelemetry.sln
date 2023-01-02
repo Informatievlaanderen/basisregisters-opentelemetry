@@ -1,0 +1,66 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A1748422-7F4A-4F43-B2CE-9FE1041F84E6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "test", "test", "{9BE46A0F-C358-4915-B73A-845A5419C531}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{2F4FE544-6889-4F44-90CB-961D842FEDEB}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		build.fsx = build.fsx
+		build.sh = build.sh
+		Directory.Build.props = Directory.Build.props
+		global.json = global.json
+		paket.dependencies = paket.dependencies
+		README.md = README.md
+	EndProjectSection
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Be.Vlaanderen.Basisregisters.OpenTelemetry", "src\Be.Vlaanderen.Basisregisters.OpenTelemetry\Be.Vlaanderen.Basisregisters.OpenTelemetry.csproj", "{B9F71A16-447A-458C-BC2E-AE8E34A957D6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Be.Vlaanderen.Basisregisters.OpenTelemetry.Tests", "test\Be.Vlaanderen.Basisregisters.OpenTelemetry.Tests\Be.Vlaanderen.Basisregisters.OpenTelemetry.Tests.csproj", "{F5135F11-3BFA-4683-83A1-1165F1E94909}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "samples", "samples", "{DACED0A6-AEA7-42BF-AD88-5F3621C55CED}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenTelemetryUser.MinimalApi", "samples\OpenTelemetryUser.MinimalApi\OpenTelemetryUser.MinimalApi.csproj", "{8714C815-B737-4BB8-9A30-AD669102B965}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenTelemetryUser.WebApi", "samples\OpenTelemetryUser.WebApi\OpenTelemetryUser.WebApi.csproj", "{90B48370-2433-456C-B718-D23EFA17665E}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B9F71A16-447A-458C-BC2E-AE8E34A957D6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9F71A16-447A-458C-BC2E-AE8E34A957D6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9F71A16-447A-458C-BC2E-AE8E34A957D6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9F71A16-447A-458C-BC2E-AE8E34A957D6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F5135F11-3BFA-4683-83A1-1165F1E94909}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F5135F11-3BFA-4683-83A1-1165F1E94909}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F5135F11-3BFA-4683-83A1-1165F1E94909}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F5135F11-3BFA-4683-83A1-1165F1E94909}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8714C815-B737-4BB8-9A30-AD669102B965}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8714C815-B737-4BB8-9A30-AD669102B965}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8714C815-B737-4BB8-9A30-AD669102B965}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8714C815-B737-4BB8-9A30-AD669102B965}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90B48370-2433-456C-B718-D23EFA17665E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90B48370-2433-456C-B718-D23EFA17665E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90B48370-2433-456C-B718-D23EFA17665E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90B48370-2433-456C-B718-D23EFA17665E}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B9F71A16-447A-458C-BC2E-AE8E34A957D6} = {A1748422-7F4A-4F43-B2CE-9FE1041F84E6}
+		{F5135F11-3BFA-4683-83A1-1165F1E94909} = {9BE46A0F-C358-4915-B73A-845A5419C531}
+		{8714C815-B737-4BB8-9A30-AD669102B965} = {DACED0A6-AEA7-42BF-AD88-5F3621C55CED}
+		{90B48370-2433-456C-B718-D23EFA17665E} = {DACED0A6-AEA7-42BF-AD88-5F3621C55CED}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {47ABE86C-D296-4828-B818-2D26E1138BD9}
+	EndGlobalSection
+EndGlobal

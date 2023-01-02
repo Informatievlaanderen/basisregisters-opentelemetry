@@ -1,0 +1,8 @@
+Opentelemetry.Extensions.Hosting
+OpenTelemetry.Instrumentation.Runtime
+OpenTelemetry.Instrumentation.Http
+OpenTelemetry.Instrumentation.AspNetCore
+OpenTelemetry.Exporter.Console
+OpenTelemetry.Exporter.Jaeger
+OpenTelemetry.Exporter.OpenTelemetryProtocol
+OpenTelemetry.Exporter.Prometheus.AspNetCore
