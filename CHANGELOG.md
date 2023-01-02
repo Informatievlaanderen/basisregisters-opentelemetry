@@ -1,3 +1,17 @@
+# 1.0.0 (2023-01-02)
+
+
+### Bug Fixes
+
+* add npm ([97d7da7](https://github.com/informatievlaanderen/basisregisters-opentelemetry/commit/97d7da70764fa5036f7a9242cbd53a0a64d01225))
+* fix release.yml ([dc0cbc2](https://github.com/informatievlaanderen/basisregisters-opentelemetry/commit/dc0cbc2761f6df815bd99917481a580fed3e7e73))
+* make build.sh executable ([1b94130](https://github.com/informatievlaanderen/basisregisters-opentelemetry/commit/1b9413060290cce6aa7a32558c99a2f47858a595))
+
+
+### Features
+
+* initial implementation ([ff62938](https://github.com/informatievlaanderen/basisregisters-opentelemetry/commit/ff62938fc063312e1c71a5d03e506244829c0ce7))
+
 ## [1.0.2](https://github.com/informatievlaanderen/basisregisters-dependencyinjection/compare/v1.0.1...v1.0.2) (2022-12-28)
 
 
