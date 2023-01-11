@@ -26,7 +26,7 @@ namespace OpenTelemetryUser.MinimalApi
             builder
                 .AddOpenTelemetryTracing(typeof(Program).Namespace, displayName => displayName.StartsWith("/health") || displayName.StartsWith("/metrics"), isDevelopment:builder.Environment.IsDevelopment())
                 .AddOpenTelemetryMetrics(true)
-                .AddOpenTelemetryLogging(typeof(Program).Namespace)
+                //.AddOpenTelemetryLogging(typeof(Program).Namespace)
                 .Services.AddHealthChecks();
 
             var app = builder.Build();

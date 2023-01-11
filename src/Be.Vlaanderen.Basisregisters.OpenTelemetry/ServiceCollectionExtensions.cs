@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using Microsoft.Extensions.DependencyInjection;
+using OpenTelemetry;
 using OpenTelemetry.Logs;
 using OpenTelemetry.Metrics;
 using OpenTelemetry.Trace;
@@ -12,32 +13,34 @@ namespace Be.Vlaanderen.Basisregisters.OpenTelemetry
         public static IServiceCollection AddOpenTelemetryTracing(this IServiceCollection services, string? serviceName, Predicate<string>? noTracePredicate = null,
             IEnumerable<string>? additionalSources = null, bool isDevelopment = false)
         {
-            services.AddOpenTelemetryTracing(tracerProviderBuilder =>
-            {
-                tracerProviderBuilder
-                    .ConfigureResource(resourceBuilder => resourceBuilder.BuildOpenTelemetryResource(serviceName))
-                    .AddAspNetCoreInstrumentation()
-                    .AddHttpClientInstrumentation()
-                    .AddOtlpExporter();
-
-                if (noTracePredicate is not null)
+            services.AddOpenTelemetry()
+                .WithTracing(tracerProviderBuilder =>
                 {
-                    tracerProviderBuilder.AddProcessor(new NoTraceProcessor(noTracePredicate));
-                }
+                    tracerProviderBuilder
+                        .ConfigureResource(resourceBuilder => resourceBuilder.BuildOpenTelemetryResource(serviceName))
+                        .AddAspNetCoreInstrumentation()
+                        .AddHttpClientInstrumentation()
+                        .AddOtlpExporter();
 
-                if (additionalSources is not null)
-                {
-                    foreach (var additionalSource in additionalSources)
+                    if (noTracePredicate is not null)
                     {
-                        tracerProviderBuilder.AddSource(additionalSource);
+                        tracerProviderBuilder.AddProcessor(new NoTraceProcessor(noTracePredicate));
                     }
-                }
 
-                if (isDevelopment)
-                {
-                    tracerProviderBuilder.AddConsoleExporter();
-                }
-            });
+                    if (additionalSources is not null)
+                    {
+                        foreach (var additionalSource in additionalSources)
+                        {
+                            tracerProviderBuilder.AddSource(additionalSource);
+                        }
+                    }
+
+                    if (isDevelopment)
+                    {
+                        tracerProviderBuilder.AddConsoleExporter();
+                    }
+                })
+                .StartWithHost();
 
             return services;
         }
@@ -45,35 +48,37 @@ namespace Be.Vlaanderen.Basisregisters.OpenTelemetry
         public static IServiceCollection AddOpenTelemetryMetrics(this IServiceCollection services, bool addPrometheusEndpoint = false, IEnumerable<string>? additionalMeters = null,
             IEnumerable<(string Name, ExplicitBucketHistogramConfiguration Configuration)>? additionalViews = null)
         {
-            services.AddOpenTelemetryMetrics(meterProviderBuilder =>
-            {
-                meterProviderBuilder
-                    .AddRuntimeInstrumentation()
-                    .AddHttpClientInstrumentation()
-                    .AddAspNetCoreInstrumentation()
-                    .AddOtlpExporter();
-
-                if (additionalMeters is not null)
+            services.AddOpenTelemetry()
+                .WithMetrics(meterProviderBuilder =>
                 {
-                    foreach (var additionalMeter in additionalMeters)
+                    meterProviderBuilder
+                        .AddRuntimeInstrumentation()
+                        .AddHttpClientInstrumentation()
+                        .AddAspNetCoreInstrumentation()
+                        .AddOtlpExporter();
+
+                    if (additionalMeters is not null)
                     {
-                        meterProviderBuilder.AddMeter(additionalMeter);
+                        foreach (var additionalMeter in additionalMeters)
+                        {
+                            meterProviderBuilder.AddMeter(additionalMeter);
+                        }
                     }
-                }
 
-                if (additionalViews is not null)
-                {
-                    foreach (var additionalView in additionalViews)
+                    if (additionalViews is not null)
                     {
-                        meterProviderBuilder.AddView(additionalView.Name, additionalView.Configuration);
+                        foreach (var (name, configuration) in additionalViews)
+                        {
+                            meterProviderBuilder.AddView(name, configuration);
+                        }
                     }
-                }
 
-                if (addPrometheusEndpoint)
-                {
-                    meterProviderBuilder.AddPrometheusExporter();
-                }
-            });
+                    if (addPrometheusEndpoint)
+                    {
+                        meterProviderBuilder.AddPrometheusExporter();
+                    }
+                })
+                .StartWithHost();
 
             return services;
         }

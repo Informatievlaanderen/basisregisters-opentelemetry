@@ -10,7 +10,7 @@ namespace OpenTelemetryUser.WebApi
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args)
             => new WebHostBuilder()
-                .AddOpenTelemetryLogging(typeof(Startup).Namespace)
+                //.AddOpenTelemetryLogging(typeof(Startup).Namespace)
                 .UseDefaultForApi<Startup>(
                     new ProgramOptions
                     {
