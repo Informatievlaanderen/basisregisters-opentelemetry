@@ -15,6 +15,7 @@ nuget OpenTelemetry.Exporter.Console 1.4.0-rc.1
 nuget OpenTelemetry.Exporter.Jaeger 1.4.0-rc.1
 nuget OpenTelemetry.Exporter.OpenTelemetryProtocol 1.4.0-rc.1
 nuget OpenTelemetry.Exporter.Prometheus.AspNetCore 1.4.0-rc.1
+nuget OpenTelemetry.Extensions.DependencyInjection 1.4.0-rc.1
 nuget OpenTelemetry.Extensions.Hosting 1.4.0-rc.1
 nuget OpenTelemetry.Instrumentation.AspNetCore 1.0.0-rc9.10
 nuget OpenTelemetry.Instrumentation.Http 1.0.0-rc9.10
