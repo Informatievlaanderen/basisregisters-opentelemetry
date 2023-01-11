@@ -1,3 +1,10 @@
+## [1.0.3](https://github.com/informatievlaanderen/basisregisters-opentelemetry/compare/v1.0.2...v1.0.3) (2023-01-11)
+
+
+### Bug Fixes
+
+* add OpenTelemetry.Extensions.DependencyInjection ([227b227](https://github.com/informatievlaanderen/basisregisters-opentelemetry/commit/227b22761966839a80b5d71a6ad4dc8a3dda66fb))
+
 ## [1.0.2](https://github.com/informatievlaanderen/basisregisters-opentelemetry/compare/v1.0.1...v1.0.2) (2023-01-11)
 
 
