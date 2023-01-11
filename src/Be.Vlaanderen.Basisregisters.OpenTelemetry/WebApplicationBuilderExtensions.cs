@@ -25,23 +25,23 @@ namespace Be.Vlaanderen.Basisregisters.OpenTelemetry
             return builder;
         }
 
-        public static WebApplicationBuilder AddOpenTelemetryLogging(this WebApplicationBuilder builder, string? serviceName, bool clearLoggingProviders = true)
-        {
-            if (clearLoggingProviders)
-            {
-                builder.Logging.ClearProviders();
-            }
+        //public static WebApplicationBuilder AddOpenTelemetryLogging(this WebApplicationBuilder builder, string? serviceName, bool clearLoggingProviders = true)
+        //{
+        //    if (clearLoggingProviders)
+        //    {
+        //        builder.Logging.ClearProviders();
+        //    }
 
-            builder.Logging.AddOpenTelemetry(options =>
-            {
-                options
-                    .ConfigureResource(resourceBuilder => resourceBuilder.BuildOpenTelemetryResource(serviceName))
-                    .AddConsoleExporter();
-            });
+        //    builder.Logging.AddOpenTelemetry(options =>
+        //    {
+        //        options
+        //            .ConfigureResource(resourceBuilder => resourceBuilder.BuildOpenTelemetryResource(serviceName))
+        //            .AddConsoleExporter();
+        //    });
 
-            builder.Services.AddOpenTelemetryLogging();
+        //    builder.Services.AddOpenTelemetryLogging();
 
-            return builder;
-        }
+        //    return builder;
+        //}
     }
 }
