@@ -16,10 +16,17 @@ description OpenTelemetry utilities for C#.
 
 dependencies
   framework: net6.0
+    OpenTelemetry >= LOCKEDVERSION
+    OpenTelemetry.Api >= LOCKEDVERSION
+    OpenTelemetry.Exporter.Console >= LOCKEDVERSION
+    OpenTelemetry.Exporter.Jaeger >= LOCKEDVERSION
+    OpenTelemetry.Exporter.OpenTelemetryProtocol >= LOCKEDVERSION
+    OpenTelemetry.Exporter.Prometheus.AspNetCore >= LOCKEDVERSION
+    OpenTelemetry.Extensions.DependencyInjection >= LOCKEDVERSION
     OpenTelemetry.Extensions.Hosting >= LOCKEDVERSION
-    OpenTelemetry.Instrumentation.Runtime >= LOCKEDVERSION
-    OpenTelemetry.Instrumentation.Http >= LOCKEDVERSION
     OpenTelemetry.Instrumentation.AspNetCore >= LOCKEDVERSION
+    OpenTelemetry.Instrumentation.Http >= LOCKEDVERSION
+    OpenTelemetry.Instrumentation.Runtime >= LOCKEDVERSION
 
 files
   bin\Release\net6.0\Be.Vlaanderen.Basisregisters.OpenTelemetry.dll => lib\net6.0
