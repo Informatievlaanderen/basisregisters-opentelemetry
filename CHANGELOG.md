@@ -1,3 +1,11 @@
+## [1.0.2](https://github.com/informatievlaanderen/basisregisters-opentelemetry/compare/v1.0.1...v1.0.2) (2023-01-11)
+
+
+### Bug Fixes
+
+* bump OpenTelemetry ([4fd61c3](https://github.com/informatievlaanderen/basisregisters-opentelemetry/commit/4fd61c32fd2c12e70a6493922922c9ec988ed609))
+* use coverage in build.yml ([3080215](https://github.com/informatievlaanderen/basisregisters-opentelemetry/commit/308021567b87d8e98d83d79fcb273ee0dab21db7))
+
 ## [1.0.1](https://github.com/informatievlaanderen/basisregisters-opentelemetry/compare/v1.0.0...v1.0.1) (2023-01-02)
 
 
