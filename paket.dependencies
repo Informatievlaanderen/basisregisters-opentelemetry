@@ -25,7 +25,9 @@ nuget Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore 6.0.3
 nuget Microsoft.AspNetCore.Mvc.NewtonsoftJson 6.0.3
 nuget Microsoft.EntityFrameworkCore.Abstractions 6.0.3
 nuget Microsoft.EntityFrameworkCore.Analyzers 6.0.3
+nuget Microsoft.Extensions.DependencyInjection.Abstractions 6.0.0
 nuget Microsoft.Extensions.Diagnostics.HealthChecks.EntityFrameworkCore 6.0.3
+nuget Microsoft.Extensions.Hosting.Abstractions 6.0.0
 
 // TEST STUFF
 nuget Microsoft.NET.Test.Sdk 17.4.0
