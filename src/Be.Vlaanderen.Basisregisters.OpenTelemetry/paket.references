@@ -1,3 +1,6 @@
+Microsoft.Extensions.DependencyInjection.Abstractions
+Microsoft.Extensions.Hosting.Abstractions
+
 Opentelemetry.Extensions.Hosting
 OpenTelemetry.Instrumentation.Runtime
 OpenTelemetry.Instrumentation.Http
