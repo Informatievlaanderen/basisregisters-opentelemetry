@@ -1,3 +1,10 @@
+## [1.0.5](https://github.com/informatievlaanderen/basisregisters-opentelemetry/compare/v1.0.4...v1.0.5) (2023-01-12)
+
+
+### Bug Fixes
+
+* add Microsoft.Extensions.* dependencies ([7a6c523](https://github.com/informatievlaanderen/basisregisters-opentelemetry/commit/7a6c523ebfc9423d33afa698a080d7ebc195e27b))
+
 ## [1.0.4](https://github.com/informatievlaanderen/basisregisters-opentelemetry/compare/v1.0.3...v1.0.4) (2023-01-12)
 
 
