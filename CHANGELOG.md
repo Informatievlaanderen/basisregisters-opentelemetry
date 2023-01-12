@@ -1,3 +1,10 @@
+## [1.0.4](https://github.com/informatievlaanderen/basisregisters-opentelemetry/compare/v1.0.3...v1.0.4) (2023-01-12)
+
+
+### Bug Fixes
+
+* add dependencies to paket.template ([357b936](https://github.com/informatievlaanderen/basisregisters-opentelemetry/commit/357b9363a6b7e893ff9cb8886ac10b1d8ca2ba5a))
+
 ## [1.0.3](https://github.com/informatievlaanderen/basisregisters-opentelemetry/compare/v1.0.2...v1.0.3) (2023-01-11)
 
 
