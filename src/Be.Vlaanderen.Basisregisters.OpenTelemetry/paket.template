@@ -16,6 +16,8 @@ description OpenTelemetry utilities for C#.
 
 dependencies
   framework: net6.0
+    Microsoft.Extensions.DependencyInjection.Abstractions >= LOCKEDVERSION
+    Microsoft.Extensions.Hosting.Abstractions >= LOCKEDVERSION
     OpenTelemetry >= LOCKEDVERSION
     OpenTelemetry.Api >= LOCKEDVERSION
     OpenTelemetry.Exporter.Console >= LOCKEDVERSION
