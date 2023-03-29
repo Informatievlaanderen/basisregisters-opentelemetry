@@ -33,6 +33,7 @@ namespace OpenTelemetryUser.WebApi
             services
                 .AddOpenTelemetryTracing(typeof(Startup).Namespace, isDevelopment:_environment.IsDevelopment())
                 .AddOpenTelemetryMetrics(true)
+                .AddOpenTelemetryLogging()
                 .ConfigureDefaultForApi<Startup>(new StartupConfigureOptions
                 {
                     Cors =

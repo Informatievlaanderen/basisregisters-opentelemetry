@@ -27,6 +27,11 @@ dependencies
     OpenTelemetry.Instrumentation.AspNetCore >= LOCKEDVERSION
     OpenTelemetry.Instrumentation.Http >= LOCKEDVERSION
     OpenTelemetry.Instrumentation.Runtime >= LOCKEDVERSION
+    Microsoft.Extensions.Configuration >= LOCKEDVERSION
+    Microsoft.Extensions.DependencyInjection >= LOCKEDVERSION
+    Microsoft.Extensions.Hosting.Abstractions >= LOCKEDVERSION
+    Microsoft.Extensions.Logging >= LOCKEDVERSION
+    Microsoft.Extensions.Options >= LOCKEDVERSION
 
 files
   bin\Release\net6.0\Be.Vlaanderen.Basisregisters.OpenTelemetry.dll => lib\net6.0

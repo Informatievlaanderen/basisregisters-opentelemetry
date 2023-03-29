@@ -1,8 +1,8 @@
-﻿using Microsoft.AspNetCore.Builder;
+﻿using System;
+using System.Collections.Generic;
+using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Logging;
 using OpenTelemetry.Logs;
-using System;
-using System.Collections.Generic;
 using OpenTelemetry.Metrics;
 
 namespace Be.Vlaanderen.Basisregisters.OpenTelemetry
@@ -18,30 +18,31 @@ namespace Be.Vlaanderen.Basisregisters.OpenTelemetry
         }
 
         public static WebApplicationBuilder AddOpenTelemetryMetrics(this WebApplicationBuilder builder, bool addPrometheusEndpoint = false, IEnumerable<string>? additionalMeters = null,
-        IEnumerable<(string Name, ExplicitBucketHistogramConfiguration Configuration)>? additionalViews = null)
+            IEnumerable<(string Name, ExplicitBucketHistogramConfiguration Configuration)>? additionalViews = null)
         {
             builder.Services.AddOpenTelemetryMetrics(addPrometheusEndpoint, additionalMeters, additionalViews);
 
             return builder;
         }
 
-        //public static WebApplicationBuilder AddOpenTelemetryLogging(this WebApplicationBuilder builder, string? serviceName, bool clearLoggingProviders = true)
-        //{
-        //    if (clearLoggingProviders)
-        //    {
-        //        builder.Logging.ClearProviders();
-        //    }
+        public static WebApplicationBuilder AddOpenTelemetryLogging(this WebApplicationBuilder builder, bool clearLoggingProviders = true)
+        {
+            if (clearLoggingProviders)
+            {
+                builder.Logging.ClearProviders();
+            }
 
-        //    builder.Logging.AddOpenTelemetry(options =>
-        //    {
-        //        options
-        //            .ConfigureResource(resourceBuilder => resourceBuilder.BuildOpenTelemetryResource(serviceName))
-        //            .AddConsoleExporter();
-        //    });
+            using var loggerFactory = LoggerFactory.Create(loggingBuilder =>
+            {
+                loggingBuilder.AddOpenTelemetry(options =>
+                {
+                    options.AddConsoleExporter();
+                });
+            });
 
-        //    builder.Services.AddOpenTelemetryLogging();
+            builder.Services.AddOpenTelemetryLogging();
 
-        //    return builder;
-        //}
+            return builder;
+        }
     }
 }
