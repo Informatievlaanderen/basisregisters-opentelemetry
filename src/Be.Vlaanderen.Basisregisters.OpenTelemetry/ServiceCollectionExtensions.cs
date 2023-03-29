@@ -83,13 +83,13 @@ namespace Be.Vlaanderen.Basisregisters.OpenTelemetry
             return services;
         }
 
-        internal static IServiceCollection AddOpenTelemetryLogging(this IServiceCollection services)
+        public static IServiceCollection AddOpenTelemetryLogging(this IServiceCollection services)
         {
-            services.Configure<OpenTelemetryLoggerOptions>(opt =>
+            services.Configure<OpenTelemetryLoggerOptions>(loggerOptions =>
             {
-                opt.IncludeScopes = true;
-                opt.ParseStateValues = true;
-                opt.IncludeFormattedMessage = true;
+                loggerOptions.IncludeScopes = true;
+                loggerOptions.ParseStateValues = true;
+                loggerOptions.IncludeFormattedMessage = true;
             });
             
             return services;

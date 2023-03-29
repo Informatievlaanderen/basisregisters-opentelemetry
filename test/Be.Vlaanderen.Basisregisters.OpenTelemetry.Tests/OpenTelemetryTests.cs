@@ -1,4 +1,6 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Options;
+using OpenTelemetry.Logs;
 using OpenTelemetry.Metrics;
 using OpenTelemetry.Trace;
 using Xunit;
@@ -23,6 +25,15 @@ namespace Be.Vlaanderen.Basisregisters.OpenTelemetry.Tests
             services.AddOpenTelemetryMetrics(true);
 
             Assert.Contains(services, x => x.ServiceType == typeof(MeterProvider));
+        }
+
+        [Fact]
+        public void AddOpenTelemetryLogging()
+        {
+            var services = new ServiceCollection();
+            services.AddOpenTelemetryLogging();
+
+            Assert.Contains(services, x => x.ServiceType == typeof(IConfigureOptions<OpenTelemetryLoggerOptions>));
         }
     }
 }
