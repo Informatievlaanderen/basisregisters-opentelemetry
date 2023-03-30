@@ -1,6 +1,6 @@
 {
   "name": "basisregisters-opentelemetry",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A library to facilitate usage of OpenTelemetry in base registries.",
   "author": "Basisregisters Vlaanderen",
   "license": "EUPL-1.2",
