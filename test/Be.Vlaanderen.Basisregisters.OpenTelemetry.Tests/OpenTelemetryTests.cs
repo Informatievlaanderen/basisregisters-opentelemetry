@@ -3,7 +3,7 @@ using OpenTelemetry.Metrics;
 using OpenTelemetry.Trace;
 using Xunit;
 
-namespace Be.Vlaanderen.Basisregisters.OpenTelemetry.Tests
+namespace Be.Vlaanderen.Basisregisters.OpenTelemetry.Tests 
 {
     public class OpenTelemetryTests
     {
