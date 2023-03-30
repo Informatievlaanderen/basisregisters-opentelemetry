@@ -1,3 +1,10 @@
+# [1.1.0](https://github.com/informatievlaanderen/basisregisters-opentelemetry/compare/v1.0.5...v1.1.0) (2023-03-30)
+
+
+### Features
+
+* add logging ([25b4d08](https://github.com/informatievlaanderen/basisregisters-opentelemetry/commit/25b4d089b1874906fdd7cb5b9a20d89a3d6f255f))
+
 ## [1.0.5](https://github.com/informatievlaanderen/basisregisters-opentelemetry/compare/v1.0.4...v1.0.5) (2023-01-12)
 
 
