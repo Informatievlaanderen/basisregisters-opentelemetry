@@ -1,0 +1,9 @@
+Elastic.Apm
+Elastic.Apm.AspNetCore
+Elastic.Apm.EntityFrameworkCore
+Elastic.Apm.Extensions.Hosting
+Elastic.Apm.SqlClient
+Elastic.Apm.StackExchange.Redis
+ElasticApm.MediatR
+
+Microsoft.AspNetCore.Http.Abstractions
