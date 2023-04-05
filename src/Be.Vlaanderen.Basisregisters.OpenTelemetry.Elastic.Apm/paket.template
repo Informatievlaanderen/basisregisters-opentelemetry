@@ -1,8 +1,8 @@
 type file
 version 1.0.0
 
-id Be.Vlaanderen.Basisregisters.OpenTelemetry.ElasticApm
-title Be.Vlaanderen.Basisregisters.OpenTelemetry.ElasticApm
+id Be.Vlaanderen.Basisregisters.OpenTelemetry.Elastic.Apm
+title Be.Vlaanderen.Basisregisters.OpenTelemetry.Elastic.Apm
 
 authors Basisregisters Vlaanderen
 owners Digitaal Vlaanderen <https://vlaanderen.be/digitaal-vlaanderen>
@@ -26,5 +26,5 @@ dependencies
     Microsoft.AspNetCore.Http.Abstractions >= LOCKEDVERSION
 
 files
-  bin\Release\net6.0\Be.Vlaanderen.Basisregisters.OpenTelemetry.ElasticApm.dll => lib\net6.0
-  bin\Release\net6.0\Be.Vlaanderen.Basisregisters.OpenTelemetry.ElasticApm.pdb => lib\net6.0
+  bin\Release\net6.0\Be.Vlaanderen.Basisregisters.OpenTelemetry.Elastic.Apm.dll => lib\net6.0
+  bin\Release\net6.0\Be.Vlaanderen.Basisregisters.OpenTelemetry.Elastic.Apm.pdb => lib\net6.0
