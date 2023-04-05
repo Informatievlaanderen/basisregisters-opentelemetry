@@ -7,7 +7,6 @@ nuget Microsoft.Build 17.3.2
 nuget Microsoft.Build.Framework 17.3.2
 nuget Microsoft.Build.Tasks.Core 17.3.2
 nuget Microsoft.Build.Utilities.Core 17.3.2
-
 nuget Be.Vlaanderen.Basisregisters.Build.Pipeline 6.0.6 //"
 
 #load "packages/Be.Vlaanderen.Basisregisters.Build.Pipeline/Content/build-generic.fsx"
@@ -36,9 +35,13 @@ Target.create "Test_Solution" (fun _ -> test "basisregisters-opentelemetry")
 
 Target.create "Lib_Publish" (fun _ ->
     publishSource "Be.Vlaanderen.Basisregisters.OpenTelemetry"
+    publishSource "Be.Vlaanderen.Basisregisters.OpenTelemetry.Elastic.Apm"
 )
 
-Target.create "Lib_Pack" (fun _ -> pack "Be.Vlaanderen.Basisregisters.OpenTelemetry")
+Target.create "Lib_Pack" (fun _ ->
+    pack "Be.Vlaanderen.Basisregisters.OpenTelemetry"
+    pack "Be.Vlaanderen.Basisregisters.OpenTelemetry.Elastic.Apm"
+)
 
 // --------------------------------------------------------------------------------
 Target.create "PublishAll" ignore
