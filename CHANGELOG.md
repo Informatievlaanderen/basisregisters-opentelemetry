@@ -1,3 +1,17 @@
+# [1.2.0](https://github.com/informatievlaanderen/basisregisters-opentelemetry/compare/v1.1.1...v1.2.0) (2023-04-05)
+
+
+### Bug Fixes
+
+* fix paket.template ([af951d7](https://github.com/informatievlaanderen/basisregisters-opentelemetry/commit/af951d7bab1ab40c4c6d95934b2979fa36391879))
+* import library props ([87f5edc](https://github.com/informatievlaanderen/basisregisters-opentelemetry/commit/87f5edc043b2426d2bdce8f9925bafe632c4b9b1))
+* include Elastic.Apm in build.fsx ([d21ed9e](https://github.com/informatievlaanderen/basisregisters-opentelemetry/commit/d21ed9e84d205735a02d374a667ddaea08b0ff8b))
+
+
+### Features
+
+* add elastic-apm ([4a8eb9b](https://github.com/informatievlaanderen/basisregisters-opentelemetry/commit/4a8eb9ba75604526c776b57678bd30a8c41953a3))
+
 ## [1.1.1](https://github.com/informatievlaanderen/basisregisters-opentelemetry/compare/v1.1.0...v1.1.1) (2023-03-30)
 
 
