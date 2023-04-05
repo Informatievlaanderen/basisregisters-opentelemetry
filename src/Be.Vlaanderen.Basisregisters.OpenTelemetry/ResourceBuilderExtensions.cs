@@ -15,6 +15,5 @@ namespace Be.Vlaanderen.Basisregisters.OpenTelemetry
                 .AddService(serviceName ?? "Service", serviceVersion: assemblyVersion, serviceInstanceId: Environment.MachineName)
                 .Build();
         }
-
     }
 }

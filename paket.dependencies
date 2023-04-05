@@ -9,6 +9,14 @@ nuget Be.Vlaanderen.Basisregisters.Api 18.3.1
 nuget Be.Vlaanderen.Basisregisters.DependencyInjection 1.0.3
 
 // PRODUCTION STUFF
+nuget Elastic.Apm 1.20.0
+nuget Elastic.Apm.AspNetCore 1.20.0
+nuget Elastic.Apm.EntityFrameworkCore 1.20.0
+nuget Elastic.Apm.Extensions.Hosting 1.20.0
+nuget Elastic.Apm.SqlClient 1.20.0
+nuget Elastic.Apm.StackExchange.Redis 1.20.0
+nuget ElasticApm.MediatR 0.2.0
+
 nuget OpenTelemetry 1.4.0-rc.1
 nuget OpenTelemetry.Api 1.4.0-rc.1
 nuget OpenTelemetry.Exporter.Console 1.4.0-rc.1
@@ -22,6 +30,7 @@ nuget OpenTelemetry.Instrumentation.Http 1.0.0-rc9.10
 nuget OpenTelemetry.Instrumentation.Runtime 1.1.0-beta.2
 
 nuget Microsoft.AspNetCore.Diagnostics.EntityFrameworkCore 6.0.3
+nuget Microsoft.AspNetCore.Http.Abstractions 2.2.0
 nuget Microsoft.AspNetCore.Mvc.NewtonsoftJson 6.0.3
 nuget Microsoft.EntityFrameworkCore.Abstractions 6.0.3
 nuget Microsoft.EntityFrameworkCore.Analyzers 6.0.3

@@ -28,6 +28,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenTelemetryUser.MinimalAp
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OpenTelemetryUser.WebApi", "samples\OpenTelemetryUser.WebApi\OpenTelemetryUser.WebApi.csproj", "{90B48370-2433-456C-B718-D23EFA17665E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Be.Vlaanderen.Basisregisters.OpenTelemetry.Elastic.Apm", "src\Be.Vlaanderen.Basisregisters.OpenTelemetry.Elastic.Apm\Be.Vlaanderen.Basisregisters.OpenTelemetry.Elastic.Apm.csproj", "{CBDDCA08-2C13-4FED-943B-CDE82F504187}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,6 +52,10 @@ Global
 		{90B48370-2433-456C-B718-D23EFA17665E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{90B48370-2433-456C-B718-D23EFA17665E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{90B48370-2433-456C-B718-D23EFA17665E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CBDDCA08-2C13-4FED-943B-CDE82F504187}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CBDDCA08-2C13-4FED-943B-CDE82F504187}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CBDDCA08-2C13-4FED-943B-CDE82F504187}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CBDDCA08-2C13-4FED-943B-CDE82F504187}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -59,6 +65,7 @@ Global
 		{F5135F11-3BFA-4683-83A1-1165F1E94909} = {9BE46A0F-C358-4915-B73A-845A5419C531}
 		{8714C815-B737-4BB8-9A30-AD669102B965} = {DACED0A6-AEA7-42BF-AD88-5F3621C55CED}
 		{90B48370-2433-456C-B718-D23EFA17665E} = {DACED0A6-AEA7-42BF-AD88-5F3621C55CED}
+		{CBDDCA08-2C13-4FED-943B-CDE82F504187} = {A1748422-7F4A-4F43-B2CE-9FE1041F84E6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {47ABE86C-D296-4828-B818-2D26E1138BD9}
