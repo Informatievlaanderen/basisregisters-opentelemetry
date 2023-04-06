@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/informatievlaanderen/basisregisters-opentelemetry/compare/v1.2.1...v1.2.2) (2023-04-06)
+
+
+### Bug Fixes
+
+* try fix release ([6d39ebe](https://github.com/informatievlaanderen/basisregisters-opentelemetry/commit/6d39ebe064f25684d1f5be8c5ff34f382f7af61b))
+
 ## [1.2.1](https://github.com/informatievlaanderen/basisregisters-opentelemetry/compare/v1.2.0...v1.2.1) (2023-04-06)
 
 
