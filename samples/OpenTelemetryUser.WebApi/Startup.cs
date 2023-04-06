@@ -22,7 +22,7 @@ namespace OpenTelemetryUser.WebApi
         private readonly IHostEnvironment _environment;
         private IContainer _applicationContainer;
 
-        public Startup(IConfiguration configuration, IHostEnvironment environment)
+        public Startup(IConfiguration configuration, IHostEnvironment environment) 
         {
             _configuration = configuration;
             _environment = environment;
