@@ -38,10 +38,7 @@ Target.create "Lib_Publish" (fun _ ->
     publishSource "Be.Vlaanderen.Basisregisters.OpenTelemetry.Elastic.Apm"
 )
 
-Target.create "Lib_Pack" (fun _ ->
-    pack "Be.Vlaanderen.Basisregisters.OpenTelemetry"
-    pack "Be.Vlaanderen.Basisregisters.OpenTelemetry.Elastic.Apm"
-)
+Target.create "Lib_Pack" (fun _ -> pack "basisregisters-opentelemetry")
 
 // --------------------------------------------------------------------------------
 Target.create "PublishAll" ignore

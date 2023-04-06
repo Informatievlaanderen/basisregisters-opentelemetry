@@ -105,9 +105,11 @@ jobs:
       if: env.RELEASE_VERSION != 'none'
       shell: bash
       run: |
-        node packages/Be.Vlaanderen.Basisregisters.Build.Pipeline/Content/ci-nuget.js dist/$LIBNAME/$LIBNAME.$SEMVER.nupkg
+        node packages/Be.Vlaanderen.Basisregisters.Build.Pipeline/Content/ci-nuget.js dist/$SOLUTION/$LIBNAME.$SEMVER.nupkg
+        node packages/Be.Vlaanderen.Basisregisters.Build.Pipeline/Content/ci-nuget.js dist/$SOLUTION/$LIBNAME.Elastic.Apm.$SEMVER.nupkg
       env:
         LIBNAME: Be.Vlaanderen.Basisregisters.OpenTelemetry
+        SOLUTION: basisregisters-opentelemetry
         SEMVER: ${{ env.RELEASE_VERSION }}
         NUGET_HOST: ${{ secrets.NUGET_HOST }}
         NUGET_API_KEY: ${{ secrets.NUGET_API_KEY }}
